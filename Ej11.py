@@ -29,16 +29,24 @@ def productRight(matrix, i, j):
         product *= matrix[i][z]
     return product
 
-def productDiagonally(matrix, i, j):
-    if(i+4 >= len(matrix) or j+4 >= len(matrix)):
+def productDiagonallyNatural(matrix, i, j):
+    if(i+3 >= len(matrix) or j+3 >= len(matrix)):
         return 0
     product = 1
     for z in range(4):
         product *= matrix[i+z][j+z]
     return product
 
+def productDiagonallyReverse(matrix, i, j):
+    if(i-3 < 0 or j+3 >= len(matrix)):
+        return 0
+    product = 1
+    for z in range(4):
+        product *= matrix[i-z][j+z]
+    return product
+
 def calculateProductsMax(matrix, i, j):
-    return max(productDown(matrix,i,j),productRight(matrix,i,j),productDiagonally(matrix,i,j))
+    return max(productDown(matrix,i,j),productRight(matrix,i,j),productDiagonallyNatural(matrix,i,j), productDiagonallyReverse(matrix, i, j))
 
 
 maxMult = 0 

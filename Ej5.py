@@ -6,7 +6,6 @@ def evenlyDivisible(num):
             return False
     return True
 
-
 found = False
 i = 1
 while not found:
@@ -16,4 +15,3 @@ while not found:
     i += 1
 
 print(sol)
-

@@ -1,2 +1,2 @@
 # Eulers-Problems
-Project Euler problems solved on my account
+Project Euler problems solved by myself
